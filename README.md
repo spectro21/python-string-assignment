@@ -1,2 +1,2 @@
 # python-string-assignment
-showcases
+Showcases a simple system  that offers simple features for analyzing sentence and paragraph.
