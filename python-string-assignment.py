@@ -1,0 +1,69 @@
+user_txt = input("please enter a sentence:")
+
+while True:  
+      action = int(input("please select an action: \n"
+      "1. Reverse the sentence: \n" 
+      "2. Count vowels: \n" 
+      "3. Check if palindrome: \n" 
+      "4. Find and replace a word: \n" 
+      "5. Format title case: \n" 
+      "6. Split into words:\n" 
+      "7. Word frequency counter:\n" 
+      "8. Swap case:\n"
+      "9. Exit: \n"
+      "   "))
+
+      if action == 1: #REVERSE THE SENTENCE
+         reverse_text = user_txt[::-1]
+         print("Reversed sentence: ", reverse_text)
+
+      if action == 2: #COUNT VOWELS
+         vowels = "aeiouAEIOU"
+         count = 0
+         for char in user_txt:
+          if char in vowels:
+            count += 1
+
+         print(f"Number of vowels: {count}")
+
+      if action == 3: #CHECK IF PALINDROME
+         clean_txt = user_txt.replace("  ", "").lower()
+         if clean_txt == clean_txt[::-1]:
+          print("It's a palindrome!")
+         else:
+          print("Not a palindrome.")
+
+      if action == 4: #FIND AND REPLACE A WORD
+         old_word = input("Please enter the word to find and replace:")
+         new_word = input("Please enter the new word: ")
+         new_text = user_txt.replace(old_word, new_word)
+         print ("Updated sentence: ",new_text)
+        
+
+      if action == 5: #FORMAT TITLE CASE
+         title_text = user_txt.title()
+         print (title_text)
+
+      if action == 6: #SPLIT INTO WORDS
+         splitword = user_txt.split()
+         print(splitword)
+
+      if action == 7: #WORD FREQUENCY COUNTER
+         wordsplit = user_txt.split()
+         word_freq = {}
+         for word in wordsplit:
+          if word in word_freq:
+            word_freq[word] += 1
+         for word, count in word_freq.items():
+          print(f"{word}: {count}")
+
+      if action == 8: #SWAP CASE
+         swapped_case = user_txt.swapcase()
+         print("Original: ", user_txt)
+         print("Swapped case: ", swapped_case)
+
+
+      if action == 9: #EXIT
+         print ("Exiting the program.")
+
+         break
